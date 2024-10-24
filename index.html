@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./src/styles/">
+    <link rel="stylesheet" href="./src/styles/lading.css" />
   </head>
   <body>
-    <h1>procesamiento de imágenes con javaScript</h1>
+    <div class="matrix_container">
+      <div
+        class="matrix_container--title"
+      >
+        <h1 class="matrix--title">
+          Procesamiento de imagen a escala de grises online
+        </h1>
+      </div>
 
-    <input type="file" id="uploadImage" accept="imange/*">
+      <div class="matrix_controllers">
+        <input type="file" id="uploadImage" accept="imange/*" />
+        <button id="grayscaleButton">Aplicar filtro Blanco y Negro</button>
+        <button id="clearButton">Remover imagen</button>
+      </div>
 
-    <canvas id="imageCanvas"></canvas>
-
-    <button id="grayscaleButton">Aplicar filtro Blanco y Negro</button>
-
-    <button id="clearButton">Remover imagen</button>
+      <canvas id="imageCanvas"></canvas>
+    </div>
 
     <script src="src/app.js"></script>
   </body>

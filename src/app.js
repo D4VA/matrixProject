@@ -2,10 +2,14 @@ const canvas = document.getElementById('imageCanvas');
 const ctx = canvas.getContext('2d');
 const uploadImage = document.getElementById('uploadImage');
 const grayscaleButton = document.getElementById('grayscaleButton');
+const clearButton = document.getElementById('clearButton');
 
 // Evento para cargar la imagen
 uploadImage.addEventListener('change', (event) => {
   const file = event.target.files[0];
+
+  if (!file) return;
+
   const reader = new FileReader();
 
   reader.onload = (e) => {
@@ -20,6 +24,8 @@ uploadImage.addEventListener('change', (event) => {
   };
 
   reader.readAsDataURL(file);
+
+  uploadImage.value = '';
 });
 
 // Filtro de escala de grises
@@ -34,5 +40,13 @@ grayscaleButton.addEventListener('click', () => {
     data[i + 2] = avg;
   }
 
+  console.log(data);
+  
   ctx.putImageData(imageData, 0, 0);
 });
+
+clearButton.addEventListener('click', () => {
+  canvas.height = 0
+  canvas.width = 0
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+})

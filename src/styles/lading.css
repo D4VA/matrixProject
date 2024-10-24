@@ -1,28 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  canvas {
-    border: 1px solid black;
-    margin-top: 20px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+canvas {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.matrix_container {}
+
+.matrix_container--title {
+  align-content: center;
+  background-color: #000;
+  height: 250px;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.matrix--title {
+  color: #fff;
+  font-size: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 10px;
+}
+
+.matrix_controllers {
+  display: flex;
+  flex-direction: column;
+  margin: 34px auto 34px;
+  max-height: 450px;
+  width: 300px;
+}
